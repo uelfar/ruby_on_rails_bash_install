@@ -13,6 +13,7 @@ sudo apt-get install -y build-essential libssl-dev libreadline-dev ruby-dev zlib
 sudo apt-get install -y libyaml-dev libxml2-dev libxslt1-dev libcurl4-openssl-dev
 sudo apt-get install -y software-properties-common libffi-dev yarn libmagickwand-dev
 sudo apt-get install nodejs -y
+sudo apt-get install imagemagick -y
 sudo apt-get install -y graphviz graphviz-dev libgraphviz-dev
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 561F9B9CAC40B2F7
 sudo apt-get install -y apt-transport-https ca-certificates
