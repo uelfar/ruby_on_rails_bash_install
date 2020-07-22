@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Install Rails 5.2.4 & Ruby 2.6.4 server environment
+# Install Rails 6.0.3 & Ruby 2.6.4 server environment
 # Created by Astm Ali | https://github.com/astmdesign , modified by u.elfar@gmail.com
 #
 clear
@@ -10,7 +10,7 @@ echo "----------------apt-get update & install -------------------------"
 sudo apt-get update
 sudo apt-get install git -y
 sudo apt-get install -y build-essential libssl-dev libreadline-dev ruby-dev zlib1g-dev liblzma-dev
-sudo apt-get install -y libyaml-dev libxml2-dev libxslt1-dev libcurl4-openssl-dev
+sudo apt-get install -y libyaml-dev libxml2-dev libxslt1-dev libcurl4-openssl-dev openssl
 sudo apt-get install -y software-properties-common libffi-dev yarn libmagickwand-dev
 sudo apt-get install nodejs -y
 sudo apt-get install imagemagick -y
@@ -38,7 +38,7 @@ sudo service nginx start
 
 
 echo "$(tput setaf 201)--------------------------------"
-echo "Install Rails 5.2.4 & Ruby 2.6.4 server environment As $(whoami) user"
+echo "Install Rails 6.0.3 & Ruby 2.6.4 server environment As $(whoami) user"
 echo "-------------------------------- $(tput setaf 0)"
 
 # Define my variables
@@ -128,7 +128,7 @@ then
 	bundler -v
 
 	echo -e "\n$(tput setaf 1)################## Installing Rails ################## $(tput setaf 0)"
-	gem install rails -v 5.2.4
+	gem install rails -v 6.0.3
 	rbenv rehash
 
 	echo -e "\n$(tput setaf 1)################## Checking Rails version ################## $(tput setaf 0)"
