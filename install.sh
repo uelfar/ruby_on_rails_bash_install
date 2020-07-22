@@ -43,6 +43,7 @@ echo "-------------------------------- $(tput setaf 0)"
 
 # Define my variables
 echo "------------------define variables--------------------------------"
+export ruby_version="2.6.4"
 export deployer_user="deployer"
 export postgres_user="postgres"
 export domain="$(dig +short myip.opendns.com @resolver1.opendns.com)"
@@ -91,10 +92,10 @@ then
 	echo -e "\n$(tput setaf 1)################## Checking the Rbenv  version ################## $(tput setaf 0)"
 	rbenv -v
 
-	echo -e "\n$(tput setaf 1)################## Installing Ruby 2.6.4 ################## $(tput setaf 0)"
+	echo -e "\n$(tput setaf 1)################## Installing Ruby ################## $(tput setaf 0)"
 	sudo apt-get update
-	rbenv install 2.6.4
-	rbenv global 2.6.4
+	rbenv install $ruby_version
+	rbenv global $ruby_version
 
 	echo -e "\n$(tput setaf 1)################## Checking Ruby versions  ################## $(tput setaf 0)"
 	rbenv versions
